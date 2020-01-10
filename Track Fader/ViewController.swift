@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         timeLabel.font = UIFont(name: "HelveticaNeue", size: 72.0)
         timeLabel.textAlignment = .center
         timeLabel.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
-        timeLabel.text = "- - -"
+        //timeLabel.text = "- - -"
         
         arrowLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
         arrowLabel.textAlignment = .center
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
 
     private func setupAndPlayMusicTrack()
     {
-        let path = Bundle.main.path(forResource: "C.m4a", ofType: nil)!
+        let path = Bundle.main.path(forResource: "Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
         
         let naturePath = Bundle.main.path(forResource: "Nature.m4a", ofType: nil)!
@@ -84,7 +84,8 @@ class ViewController: UIViewController {
             
             // Start things off.
             
-            self.timerDelay = self.randomDelay()
+            self.timerDelay = 5.0
+            //self.timerDelay = self.randomDelay()
             self.generateTimer()
             
         } catch {
@@ -110,9 +111,11 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: timerDelay, repeats: false, block: { (timer) in
             if self.trackPlayer!.volume > 0 {
                 self.arrowLabel.text = "↓"
-                self.trackPlayer!.setVolume(0.0, fadeDuration: 9.0)
+                self.arrowLabel.flash(numberOfFlashes: 5.0)
+                self.trackPlayer!.setVolume(0.0, fadeDuration: 10.0)
             } else {
-                self.trackPlayer!.setVolume(0.1, fadeDuration: 9.0)
+                self.trackPlayer!.setVolume(0.1, fadeDuration: 10.0)
+                self.arrowLabel.flash(numberOfFlashes: 5.0)
                 self.arrowLabel.text = "↑"
             }
             self.timerDelay = self.randomDelay()
@@ -135,7 +138,29 @@ class ViewController: UIViewController {
     
     // Between 10 and 30 seconds for now.
     private func randomDelay() -> TimeInterval {
-        let timeInterval = Double.random(in: 10 ..< 30)
+        let timeInterval = Double.random(in: 11 ..< 30)
         return timeInterval
+    }
+}
+
+extension UIView {
+    func flash(numberOfFlashes: Float)
+    {
+        CATransaction.begin()
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 1.0
+        flash.fromValue = 0
+        flash.toValue = 1.0
+        flash.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = numberOfFlashes
+        
+        CATransaction.setCompletionBlock {
+            self.alpha = 0
+        }
+        
+        layer.add(flash, forKey: nil)
+        
+        CATransaction.commit()
     }
 }

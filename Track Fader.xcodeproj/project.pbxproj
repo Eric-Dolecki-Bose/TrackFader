@@ -15,6 +15,7 @@
 		5FB490F323C8B03400B8BB25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FB490F123C8B03400B8BB25 /* LaunchScreen.storyboard */; };
 		5FB490FD23C8B6BE00B8BB25 /* C.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5FB490FB23C8B07C00B8BB25 /* C.m4a */; };
 		5FB490FF23C8C45000B8BB25 /* Nature.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5FB490FE23C8C45000B8BB25 /* Nature.m4a */; };
+		5FB4910123C9068500B8BB25 /* Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FB4910023C9068500B8BB25 /* Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5FB490F423C8B03400B8BB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FB490FB23C8B07C00B8BB25 /* C.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = C.m4a; sourceTree = "<group>"; };
 		5FB490FE23C8C45000B8BB25 /* Nature.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nature.m4a; sourceTree = "<group>"; };
+		5FB4910023C9068500B8BB25 /* Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				5FB490FB23C8B07C00B8BB25 /* C.m4a */,
+				5FB4910023C9068500B8BB25 /* Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3 */,
 				5FB490FE23C8C45000B8BB25 /* Nature.m4a */,
 			);
 			path = "Audio Track";
@@ -142,6 +145,7 @@
 				5FB490FD23C8B6BE00B8BB25 /* C.m4a in Resources */,
 				5FB490F323C8B03400B8BB25 /* LaunchScreen.storyboard in Resources */,
 				5FB490F023C8B03400B8BB25 /* Assets.xcassets in Resources */,
+				5FB4910123C9068500B8BB25 /* Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3 in Resources */,
 				5FB490EE23C8B03200B8BB25 /* Main.storyboard in Resources */,
 				5FB490FF23C8C45000B8BB25 /* Nature.m4a in Resources */,
 			);
