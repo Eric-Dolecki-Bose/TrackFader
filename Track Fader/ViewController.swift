@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     private var countdownTimer: Timer!
     private var timeLabel: UILabel!
     private var arrowLabel: UILabel!
+    @IBOutlet weak var mySlider: UISlider!
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -124,6 +125,10 @@ class ViewController: UIViewController {
             total = total - 1
             self.timeLabel.text = "\(total)"
         })
+    }
+    
+    @IBAction func valueChanged(_ sender: UISlider) {
+        trackPlayer?.pan = sender.value
     }
     
     // Between 10 and 30 seconds for now.
