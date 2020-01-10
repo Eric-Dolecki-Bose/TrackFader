@@ -136,9 +136,9 @@ class ViewController: UIViewController {
         trackPlayer?.pan = sender.value
     }
     
-    // Between 10 and 30 seconds for now.
+    // Between 10 and 45 seconds for now.
     private func randomDelay() -> TimeInterval {
-        let timeInterval = Double.random(in: 11 ..< 30)
+        let timeInterval = Double.random(in: 11 ..< 45)
         return timeInterval
     }
 }
