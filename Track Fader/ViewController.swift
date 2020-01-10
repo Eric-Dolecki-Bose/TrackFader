@@ -44,7 +44,9 @@ class ViewController: UIViewController {
         
         timeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 72.0))
         timeLabel.textColor = UIColor.lightGray.withAlphaComponent(0.7)
-        //timeLabel.font = UIFont.boldSystemFont(ofSize: 72.0)
+        
+        // For numerals, this font is monospaced.
+        
         timeLabel.font = UIFont(name: "HelveticaNeue", size: 72.0)
         timeLabel.textAlignment = .center
         timeLabel.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)

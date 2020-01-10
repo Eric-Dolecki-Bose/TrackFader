@@ -31,6 +31,8 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H5O-SK-ebo">
                                 <rect key="frame" x="18" y="787" width="378" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8G8-Vv-MIn"/>
                                 </connections>
@@ -58,6 +60,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="forest-floor" width="900" height="1792"/>
+        <image name="forest-floor" width="450" height="896"/>
     </resources>
 </document>
