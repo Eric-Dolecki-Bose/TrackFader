@@ -42,19 +42,19 @@ class ViewController: UIViewController {
             fatalError()
         }
         
-        timeLabel = UILabel(frame: CGRect(x: 20, y: 100, width: self.view.frame.width, height: 72.0))
-        timeLabel.textColor = UIColor.lightGray.withAlphaComponent(0.5)
+        timeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 72.0))
+        timeLabel.textColor = UIColor.lightGray.withAlphaComponent(0.7)
         //timeLabel.font = UIFont.boldSystemFont(ofSize: 72.0)
         timeLabel.font = UIFont(name: "HelveticaNeue", size: 72.0)
         timeLabel.textAlignment = .center
         timeLabel.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
         timeLabel.text = "- - -"
         
-        arrowLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 70, height: 50))
+        arrowLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
         arrowLabel.textAlignment = .center
         arrowLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
-        arrowLabel.textColor = UIColor.lightGray.withAlphaComponent(0.5)
-        arrowLabel.center = CGPoint(x: self.view.frame.midX, y: timeLabel.frame.origin.y + timeLabel.frame.height + 10)
+        arrowLabel.textColor = UIColor.lightGray.withAlphaComponent(0.7)
+        arrowLabel.center = CGPoint(x: self.view.frame.midX, y: timeLabel.frame.origin.y + timeLabel.frame.height + 30)
         arrowLabel.text = "←→"
         
         self.view.addSubview(timeLabel)
