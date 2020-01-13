@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     private var arrowLabel: UILabel!
     @IBOutlet weak var mySlider: UISlider!
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        textView.text = "Midnight -> 9 AM. Forest Birds\n9 AM -> 5 PM. Water with birds\n5 PM -> Midnight. Peepers".uppercased()
         
         let audioSession = AVAudioSession.sharedInstance()
         do {
@@ -103,13 +106,13 @@ class ViewController: UIViewController {
         let hour = Calendar.current.component(.hour, from: Date())
         if hour >= 17 {
             naturePath = Bundle.main.path(forResource: "Spring-peeper-sound.mp3", ofType: nil)!
-            descLabel.text = "( 5 PM -> Midnight. Peepers )".uppercased()
+            descLabel.text = "Peepers".uppercased()
         } else if hour < 9 {
             naturePath = Bundle.main.path(forResource: "Forest-birds-ambience-early-spring.mp3", ofType: nil)!
-            descLabel.text = "( Midnight -> 9 AM. Forest Birds )".uppercased()
+            descLabel.text = "Forest Birds".uppercased()
         } else {
             naturePath = Bundle.main.path(forResource: "Nature.m4a", ofType: nil)!
-            descLabel.text = "( 9 AM -> 5PM. Water with birds )".uppercased()
+            descLabel.text = "Water with birds".uppercased()
         }
         let natureURL = URL(fileURLWithPath: naturePath)
         
