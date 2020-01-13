@@ -63,6 +63,7 @@ class ViewController: UIViewController {
         self.view.addSubview(timeLabel)
         self.view.addSubview(arrowLabel)
         
+        setupAndPlayNatureTrack()
         setupAndPlayMusicTrack()
     }
 
@@ -71,22 +72,6 @@ class ViewController: UIViewController {
         // Found: https://freemusicarchive.org/genre/Ambient?sort=track_date_published&d=1&page=5
         let path = Bundle.main.path(forResource: "Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
-        
-        // Based upon the time of day launching, you can get three different nature sounds.
-        
-        var naturePath: String
-        let hour = Calendar.current.component(.hour, from: Date())
-        if hour >= 17 {
-            naturePath = Bundle.main.path(forResource: "Spring-peeper-sound.mp3", ofType: nil)!
-            descLabel.text = "5 PM -> Midnight. Peepers.".uppercased()
-        } else if hour < 9 {
-            naturePath = Bundle.main.path(forResource: "Forest-birds-ambience-early-spring.mp3", ofType: nil)!
-            descLabel.text = "Midnight -> 9 AM. Forest Birds.".uppercased()
-        } else {
-            naturePath = Bundle.main.path(forResource: "Nature.m4a", ofType: nil)!
-            descLabel.text = "9 AM -> 5PM. Water with birds.".uppercased()
-        }
-        let natureURL = URL(fileURLWithPath: naturePath)
         
         // Start the music file.
         
@@ -106,6 +91,24 @@ class ViewController: UIViewController {
         } catch {
             // Houston, we have a problem.
         }
+    }
+    
+    private func setupAndPlayNatureTrack()
+    {
+        // Based upon the time of day launching, you can get three different nature sounds.
+        var naturePath: String
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour >= 17 {
+            naturePath = Bundle.main.path(forResource: "Spring-peeper-sound.mp3", ofType: nil)!
+            descLabel.text = "( 5 PM -> Midnight. Peepers )".uppercased()
+        } else if hour < 9 {
+            naturePath = Bundle.main.path(forResource: "Forest-birds-ambience-early-spring.mp3", ofType: nil)!
+            descLabel.text = "( Midnight -> 9 AM. Forest Birds )".uppercased()
+        } else {
+            naturePath = Bundle.main.path(forResource: "Nature.m4a", ofType: nil)!
+            descLabel.text = "( 9 AM -> 5PM. Water with birds )".uppercased()
+        }
+        let natureURL = URL(fileURLWithPath: naturePath)
         
         // Start the nature sounds.
         
@@ -118,7 +121,6 @@ class ViewController: UIViewController {
         } catch {
             // Houston, we have a problem here.
         }
-        
     }
     
     private func generateTimer()
