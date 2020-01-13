@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     private var timeLabel: UILabel!
     private var arrowLabel: UILabel!
     @IBOutlet weak var mySlider: UISlider!
+    @IBOutlet weak var descLabel: UILabel!
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -71,7 +72,20 @@ class ViewController: UIViewController {
         let path = Bundle.main.path(forResource: "Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
         
-        let naturePath = Bundle.main.path(forResource: "Nature.m4a", ofType: nil)!
+        // Based upon the time of day launching, you can get three different nature sounds.
+        
+        var naturePath: String
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour >= 17 {
+            naturePath = Bundle.main.path(forResource: "Spring-peeper-sound.mp3", ofType: nil)!
+            descLabel.text = "5 PM -> Midnight. Peepers.".uppercased()
+        } else if hour < 9 {
+            naturePath = Bundle.main.path(forResource: "Forest-birds-ambience-early-spring.mp3", ofType: nil)!
+            descLabel.text = "Midnight -> 9 AM. Forest Birds.".uppercased()
+        } else {
+            naturePath = Bundle.main.path(forResource: "Nature.m4a", ofType: nil)!
+            descLabel.text = "9 AM -> 5PM. Water with birds.".uppercased()
+        }
         let natureURL = URL(fileURLWithPath: naturePath)
         
         // Start the music file.

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F95502423CCE12B00228AAC /* Forest-birds-ambience-early-spring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F95502323CCE12B00228AAC /* Forest-birds-ambience-early-spring.mp3 */; };
+		5F95502623CCE1E400228AAC /* Spring-peeper-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F95502523CCE1E400228AAC /* Spring-peeper-sound.mp3 */; };
 		5FB490E723C8B03200B8BB25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB490E623C8B03200B8BB25 /* AppDelegate.swift */; };
 		5FB490E923C8B03200B8BB25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB490E823C8B03200B8BB25 /* SceneDelegate.swift */; };
 		5FB490EB23C8B03200B8BB25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB490EA23C8B03200B8BB25 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F95502323CCE12B00228AAC /* Forest-birds-ambience-early-spring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Forest-birds-ambience-early-spring.mp3"; sourceTree = "<group>"; };
+		5F95502523CCE1E400228AAC /* Spring-peeper-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Spring-peeper-sound.mp3"; sourceTree = "<group>"; };
 		5FB490E323C8B03200B8BB25 /* Track Fader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Track Fader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FB490E623C8B03200B8BB25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FB490E823C8B03200B8BB25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +83,9 @@
 			children = (
 				5FB490FB23C8B07C00B8BB25 /* C.m4a */,
 				5FB4910023C9068500B8BB25 /* Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3 */,
+				5F95502323CCE12B00228AAC /* Forest-birds-ambience-early-spring.mp3 */,
 				5FB490FE23C8C45000B8BB25 /* Nature.m4a */,
+				5F95502523CCE1E400228AAC /* Spring-peeper-sound.mp3 */,
 			);
 			path = "Audio Track";
 			sourceTree = "<group>";
@@ -142,9 +148,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F95502423CCE12B00228AAC /* Forest-birds-ambience-early-spring.mp3 in Resources */,
 				5FB490FD23C8B6BE00B8BB25 /* C.m4a in Resources */,
 				5FB490F323C8B03400B8BB25 /* LaunchScreen.storyboard in Resources */,
 				5FB490F023C8B03400B8BB25 /* Assets.xcassets in Resources */,
+				5F95502623CCE1E400228AAC /* Spring-peeper-sound.mp3 in Resources */,
 				5FB4910123C9068500B8BB25 /* Lee_Rosevere_and_Daniel_Birch_-_09_-_Halo.mp3 in Resources */,
 				5FB490EE23C8B03200B8BB25 /* Main.storyboard in Resources */,
 				5FB490FF23C8C45000B8BB25 /* Nature.m4a in Resources */,
